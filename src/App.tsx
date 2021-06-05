@@ -1,10 +1,12 @@
-import React from 'react';
+import Menu from './menu/Menu'
+import Footer from './footer/Footer'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      Reduc
+      <Menu/>
+      <Footer/>
     </div>
   );
 }
