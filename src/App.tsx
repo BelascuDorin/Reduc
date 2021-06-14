@@ -1,12 +1,16 @@
-import Menu from './menu/Menu';
-import Footer from './footer/Footer';
-import './App.css';
+import "./App.css";
+import Home from "./home/Home";
+
+import { BrowserRouter as Switch, Route } from "react-router-dom";
 
 function App() {
-  return(
+  return (
     <div>
-      <Menu />
-      <Footer />
+      <Switch>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
     </div>
   );
 }
