@@ -4,8 +4,8 @@ import ProductType from "../types/Product";
 import axios from "axios";
 
 const defaultProducts = [
-  { id: 1, name: "cartofi" },
-  { id: 2, name: "patrunjel" },
+  { id: 1, name: "cartofi", category: "", shop: "", position_on_the_map: {} },
+  { id: 2, name: "patrunjel", category: "", shop: "", position_on_the_map: {} },
 ];
 
 const getProducts_MockData = async () => {
