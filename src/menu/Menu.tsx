@@ -1,11 +1,13 @@
-import React from 'react'
+import { Typography, AppBar, Toolbar } from "@material-ui/core";
 
 const Menu = () => {
-    return (
-        <div data-testid="menu">
-            Explore
-        </div>
-    )
-}
+  return (
+    <AppBar data-testid="menu" position="relative" color="transparent">
+      <Toolbar>
+        <Typography variant="h6">Reduc</Typography>
+      </Toolbar>
+    </AppBar>
+  );
+};
 
 export default Menu;
