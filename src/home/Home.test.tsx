@@ -30,6 +30,6 @@ test("all products are displayed", async () => {
   render(<Home products={products} />);
 
   products.forEach((p: ProductType) => {
-    expect(screen.getByText(`/${p.name}/i`)).toBeInTheDocument();
+    expect(screen.getAllByText(new RegExp(p.name, "i"))).toBeTruthy();
   });
 });

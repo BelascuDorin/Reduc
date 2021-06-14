@@ -6,7 +6,12 @@ const Home = (props: { products: ProductType[] }) => {
   return (
     <div data-testid="home-screen">
       <Menu />
-      Exploreaza produse la reducere Cartofi
+      Exploreaza produse la reducere
+      {props.products.map((p) => (
+        <div key={p.id}>
+          <h3>{p.name}</h3>
+        </div>
+      ))}
       <Footer />
     </div>
   );
