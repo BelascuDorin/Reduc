@@ -1,11 +1,12 @@
 import Menu from "../menu/Menu";
 import Footer from "../footer/Footer";
+import ProductType from "../types/Product";
 
-const Home = () => {
+const Home = (props: { products: ProductType[] }) => {
   return (
     <div data-testid="home-screen">
       <Menu />
-      Exploreaza produse la reducere
+      Exploreaza produse la reducere Cartofi
       <Footer />
     </div>
   );
