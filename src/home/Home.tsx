@@ -18,11 +18,12 @@ const Home = (props: { products: ProductType[] }) => {
   return (
     <div data-testid="home-screen">
       <Menu />
+      Exploreaza produse la reducere
       <CssBaseline />
-      <Container maxWidth="md">
+      <Container maxWidth="lg">
         <Grid container spacing={4}>
           {props.products.map((product) => (
-            <Grid item key={product.id} xs={12} sm={6} md={4}>
+            <Grid item key={product.id} xs={12} sm={6} md={3}>
               <Card>
                 <CardMedia
                   image="https://source.unsplash.com/random"
@@ -50,7 +51,6 @@ const Home = (props: { products: ProductType[] }) => {
           ))}
         </Grid>
       </Container>
-      Exploreaza produse la reducere
       <Footer />
     </div>
   );
