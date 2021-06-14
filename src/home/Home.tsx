@@ -3,7 +3,7 @@ import Footer from "../footer/Footer";
 
 const Home = () => {
   return (
-    <div>
+    <div data-testid="home-screen">
       <Menu />
       Exploreaza produse la reducere
       <Footer />
