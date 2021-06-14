@@ -20,11 +20,13 @@ test("Pressing site name will go to home page", () => {
   render(
     <Router history={history}>
       <App />
-    </Router>
+    </Router>,
   );
 
-  const reducButton = screen.getByText(/Reduc/i);
+  const reducButton = screen.getByText("Reduc");
   expect(reducButton).toBeInTheDocument();
 
   userEvent.click(reducButton);
+
+  expect(screen.getByTestId("home-screen")).toBeInTheDocument();
 });
