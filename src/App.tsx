@@ -7,7 +7,7 @@ import { BrowserRouter as Switch, Route } from "react-router-dom";
 
 function App() {
   const [products, setProducts] = useState([
-    { id: 3, name: "cartofi", category: "", shop: "", position_on_the_map: {} },
+    { id: 3, name: "Loading", category: "", shop: "", position_on_the_map: {} },
   ]);
 
   const fetchProducts = async () => {
