@@ -2,7 +2,6 @@ import {
   render,
   screen,
   waitForElementToBeRemoved,
-  act,
 } from "@testing-library/react";
 import { Router } from "react-router-dom";
 import { createMemoryHistory } from "history";
@@ -34,16 +33,4 @@ test("Pressing site name will go to home page", async () => {
   userEvent.click(reducButton);
 
   expect(screen.getByTestId("home-screen")).toBeInTheDocument();
-});
-
-test("Loading will be displayed until the products are fetched", async () => {
-  const history = createMemoryHistory();
-
-  render(
-    <Router history={history}>
-      <App />
-    </Router>,
-  );
-
-  await waitForElementToBeRemoved(() => screen.getByText(/Loading/i));
 });
